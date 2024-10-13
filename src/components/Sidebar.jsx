@@ -37,7 +37,7 @@ export default function Sidebar() {
           <button onClick={()=>navigate('/')} className=' bg-orange-500 w-12  p-2 rounded-full mb-4'><img src="../home.svg" alt="" /></button>
         </div>
 
-      <div className="history-container h-[19rem] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 scroll-smooth">
+      <div className="history-container  h-[19rem] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 scroll-smooth">
         {
          chatHistory.length>0 ? (chatHistory.map((chat) => (
           <div key={chat.id} className='w-full h-12 mb-2 bg-slate-700 p-2  rounded-md hover:shadow-md  overflow-hidden hover:scale-95 duration-200 hover:shadow-slate-400'>
