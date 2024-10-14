@@ -17,9 +17,9 @@ export default function Sidebar() {
   }
 
   return (
-    <div className={`bg-black ${SideToggle?'block':'hidden'} z-10 fixed h-full w-[70vw] xsm:w-[55vw] mob:w-[40vw] tab:w-[26vw] lap:w-[23vw] p-3 tab:block shadow-xl shadow-slate-500`}>
+    <div className={`bg-black ${ SideToggle ? 'translate-x-0' : '-translate-x-full'} transform transition-transform duration-500 ease-in-out rounded-r-xl z-10 fixed h-full w-[70vw] xsm:w-[55vw] mob:w-[40vw] tab:w-[26vw] lap:w-[23vw] p-3 tab:block shadow-xl shadow-slate-500`}>
 
-        <button onClick={handleToggle} className="fixed tab:hidden top-1/2 left-[70vw] xsm:left-[55vw] mob:left-[40vw] tab:left-[26vw] lap:left-[23vw] bg-yellow-400 shadow-lg shadow-slate-700 p-2 rounded-r-full">
+        <button onClick={handleToggle} className={`fixed ${ SideToggle ? 'block' : 'hidden'} z-20 tab:hidden top-1/2  left-[70vw] xsm:left-[55vw] mob:left-[40vw] tab:left-[26vw] lap:left-[23vw] bg-yellow-400 shadow-lg shadow-slate-700 p-2 rounded-r-full`}>
           <img src="../back-arrow.png" alt="Menu" className="w-5 h-7 "/>
         </button>
 

@@ -50,14 +50,14 @@ export default function Response() {
               ) : (
                 item.answer && (
                   <div className="relative">
-                    <ReactMarkdown className=' text-xl font-medium rounded-xl mt-8 p-3 mb-4 max-w-[90%] bg-gradient-to-tr from-[#FC488B] to-yellow-400'>
+                    <ReactMarkdown className=' text-xl font-medium rounded-xl mt-8 p-3 pb-6 mb-4 max-w-[90%] bg-gradient-to-tr from-[#FC488B] to-yellow-400'>
                       {truncateText(item.answer, index)}
                     </ReactMarkdown>
 
                     {item.answer.split(' ').length > 100 && (    // ....show more and ..... show less
                       <button
                         onClick={() => toggleExpand(index)}
-                        className="underline font-bold absolute bottom-3 right-40 text-xl hover:underline focus:outline-none"
+                        className="underline font-bold absolute bottom-0 pt-4 right-20 text-blue-600 text-xl hover:underline focus:outline-none"
                       >
                         {expandedIndexes.includes(index) ? '. . .Show less' : '...more'}
                       </button>
