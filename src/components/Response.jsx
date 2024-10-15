@@ -46,7 +46,7 @@ export default function Response() {
 
               {/* Render the answer if available, or show loading message for the current question only */}
               {item.loading ? (
-                <p className='text-white text-xl rounded-xl mt-8 p-3 mb-4 w-[30%] bg-gradient-to-tr from-[#FC488B] to-yellow-400'>Loading...</p>
+                <p className='text-white text-xl rounded-xl mt-8 p-3 mb-4 w-[30%] bg-gradient-to-tr from-[#FC488B] to-yellow-400'> <img className='w-20' src="../loading.gif" alt="" /> </p>
               ) : (
                 item.answer && (
                   <div className="relative">
