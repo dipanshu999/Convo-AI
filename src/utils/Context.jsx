@@ -31,7 +31,7 @@ export default function Context({ children }) {
 
     try {
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyA_ANFzW0lwaYaJKE_dnUnYu6vTPsjV7AU",
+        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyB89Qtsyy3gH8x-w6B2wx3anfbjcAgYvoc",
         method: "post",
         data: {
           "contents": [{ "parts": [{ "text": query }] }]
