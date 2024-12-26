@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import { nanoid } from 'nanoid';
+const API_key=import.meta.env.VITE_API_KEY 
 
 const ChatContext = createContext();
 
@@ -31,7 +32,7 @@ export default function Context({ children }) {
 
     try {
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyB89Qtsyy3gH8x-w6B2wx3anfbjcAgYvoc",
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_key}`,
         method: "post",
         data: {
           "contents": [{ "parts": [{ "text": query }] }]
